@@ -1,5 +1,5 @@
 # :raising_hand_man: Bruno Chirelli's Resume
-![Bruno Chirelli CodeWars](https://www.codewars.com/users/brunochirelli/badges/small)
+[![Bruno Chirelli CodeWars](https://www.codewars.com/users/brunochirelli/badges/small)](https://www.codewars.com/users/brunochirelli)
 
 Hi, my name is Bruno Chirelli and I am from Piracicaba, an interior town in São Paulo, Brazil.
 I am a React (passionate for Gatsby.js and JAMStack) front-end developer with a degree in advertising and a Google Ads Certified professional.
