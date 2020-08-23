@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 
 import { Container } from '@material-ui/core';
+import Layout from '../components/layout';
 
 const Project = ({ pageContext }) => (
-  <div>
+  <Layout>
     <h1>{pageContext.title}</h1>
-    <Container>{parse(pageContext.content)}</Container>
-  </div>
+    {parse(pageContext.content)}
+  </Layout>
 );
 
 export default Project;
