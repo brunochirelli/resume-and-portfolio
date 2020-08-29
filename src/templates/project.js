@@ -2,13 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
 
-import { Container } from '@material-ui/core';
-import Layout from '../components/layout';
+import { Container, Typography } from '@material-ui/core';
+import Layout from '../components/layout/layout';
 
 const Project = ({ pageContext }) => (
   <Layout>
-    <h1>{pageContext.title}</h1>
-    {parse(pageContext.content)}
+    <Container>
+      <Typography variant="h2" component="h1">
+        {pageContext.title}
+      </Typography>
+      {parse(pageContext.content)}
+    </Container>
   </Layout>
 );
 
