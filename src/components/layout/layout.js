@@ -18,8 +18,13 @@ const Wrapper = styled.div`
     background: white;
 
     @media screen and (min-width: 1000px) {
+      position: relative;
       width: 400px;
-      height: 100vh;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
     }
   }
 

@@ -3,19 +3,20 @@ import styled from 'styled-components';
 
 import { GitHub, LinkedIn } from '@material-ui/icons';
 import { IconButton, Link } from 'gatsby-theme-material-ui';
-import { Box } from '@material-ui/core';
+
+import me from '../../images/bruno_square.jpg';
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
   padding: 0.25rem 1rem;
 
   @media screen and (min-width: 1000px) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    height: 100vh;
     padding: 2rem;
   }
 `;
@@ -26,16 +27,23 @@ const Logo = styled.div`
   .icon {
     width: 30px;
     height: 30px;
-    background: black;
+    background: url(${me}) no-repeat center center;
+    background-size: cover;
     border-radius: 50%;
+    filter: grayscale();
+    transition: all 0.3s ease;
+
+    &:hover {
+      filter: initial;
+    }
   }
 
   @media screen and (min-width: 1000px) {
     flex-grow: 0;
 
     .icon {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
     }
   }
 `;
@@ -63,25 +71,35 @@ const Social = styled.div``;
 
 const Header = () => (
   <header>
-    <Wrapper>
-      <Logo>
-        <Link to="/">
-          <div className="icon" />
-        </Link>
-      </Logo>
-      <Navigation>
-        <Link to="/projects">Projects</Link>
-        <Link to="/resume">Resume</Link>
-      </Navigation>
-      <Social>
-        <IconButton>
-          <GitHub />
-        </IconButton>
-        <IconButton>
-          <LinkedIn />
-        </IconButton>
-      </Social>
-    </Wrapper>
+    <div className="sticky">
+      <Wrapper>
+        <Logo>
+          <Link to="/">
+            <div className="icon" />
+          </Link>
+        </Logo>
+        <Navigation>
+          <Link to="/projects">Projects</Link>
+          <Link to="/resume">Resume</Link>
+        </Navigation>
+        <Social>
+          <IconButton
+            href="https://github.com/brunochirelli/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHub />
+          </IconButton>
+          <IconButton
+            href="https://www.linkedin.com/in/brunochirelli/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedIn />
+          </IconButton>
+        </Social>
+      </Wrapper>
+    </div>
   </header>
 );
 
