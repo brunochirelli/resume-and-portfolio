@@ -22,7 +22,7 @@ const Projects = ({ append }) => (
                 path
                 thumbnail {
                   childImageSharp {
-                    fluid(maxWidth: 800) {
+                    fluid(maxWidth: 800, quality: 75) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }

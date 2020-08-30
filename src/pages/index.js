@@ -16,12 +16,9 @@ const IndexPage = () => (
           allFile(filter: { relativePath: { eq: "about.jpg" } }) {
             edges {
               node {
-                absolutePath
-                dir
-                publicURL
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 800) {
+                  fluid(maxWidth: 800, quality: 75) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
