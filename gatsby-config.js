@@ -19,7 +19,6 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/src/projects/`,
-        ignore: [`**/.*`],
       },
     },
     'gatsby-transformer-remark',
@@ -34,7 +33,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/bruno_square.jpg`, // This path is relative to the root of the site.
+        icon: `src/images/bruno_icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-theme-material-ui`,
