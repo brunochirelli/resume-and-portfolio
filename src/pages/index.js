@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { graphql, StaticQuery } from 'gatsby';
 import Layout from '../components/layout/layout';
 import SEO from '../components/layout/seo';
 import Projects from '../components/projects/Projects';
@@ -9,14 +10,33 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <Projects
-      append={
-        <ProjectItem
-          title="About"
-          link="/about"
-          image="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80"
+    <StaticQuery
+      query={graphql`
+        query {
+          allFile(filter: { relativePath: { eq: "about.jpg" } }) {
+            edges {
+              node {
+                absolutePath
+                dir
+                publicURL
+                relativePath
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={({ allFile: { edges } }) => (
+        <Projects
+          append={
+            <ProjectItem title="About" link="/about" image={edges[0].node.childImageSharp.fluid} />
+          }
         />
-      }
+      )}
     />
   </Layout>
 );

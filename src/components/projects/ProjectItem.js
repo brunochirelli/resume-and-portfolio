@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Typography, Box } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
+import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
 
 const Wrapper = styled(Link)`
   width: 100%;
   height: 30vh;
-  background: url(${({ image }) => image}) no-repeat center center;
   background-size: cover;
   filter: grayscale();
   transition: all 0.3s ease;
@@ -35,15 +36,21 @@ const Title = styled(Typography)`
   transition: all 0.3s ease;
 `;
 
-const ProjectItem = ({
-  title = 'Title',
-  link = '/',
-  image = 'https://via.placeholder.com/500',
-}) => (
-  <Wrapper to={link} image={image}>
-    <Box>
+const StyledBackgroundImage = styled(BackgroundImage)`
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+`;
+
+const ProjectItem = ({ title = 'Title', link = '/', image }) => (
+  <Wrapper to={link}>
+    <StyledBackgroundImage
+      fluid={typeof image === 'object' ? image : null}
+      src={typeof image === 'string' ? image : null}
+    >
       <Title>{title}</Title>
-    </Box>
+    </StyledBackgroundImage>
   </Wrapper>
 );
 
@@ -52,5 +59,5 @@ export default ProjectItem;
 ProjectItem.propTypes = {
   title: PropTypes.string,
   link: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.any,
 };
