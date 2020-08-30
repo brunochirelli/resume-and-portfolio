@@ -22,7 +22,7 @@ const IndexPage = () => (
                 relativePath
                 childImageSharp {
                   fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }

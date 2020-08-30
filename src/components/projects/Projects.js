@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { useStaticQuery, graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import ProjectItem from './ProjectItem';
 
 const Wrapper = styled.div`
@@ -23,7 +23,7 @@ const Projects = ({ append }) => (
                 thumbnail {
                   childImageSharp {
                     fluid(maxWidth: 800) {
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }
