@@ -1,9 +1,10 @@
 ---
 path: "/projects/bmi-calculator"
 title: "Project BMI"
+slug: "project-bmi"
 live_link: "https://chirelli.com.br/projects/bmi-calculator"
 repository: "https://github.com/brunochirelli/bmi-target-calculator"
-thumbnail: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+thumbnail: "bmi.jpg"
 ---
 
 ## BMI Target Calculator
