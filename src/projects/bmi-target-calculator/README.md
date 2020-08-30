@@ -2,7 +2,7 @@
 path: "/projects/bmi-calculator"
 title: "Project BMI"
 slug: "project-bmi"
-live_link: "https://chirelli.com.br/projects/bmi-calculator"
+live_link: "https://github.com/brunochirelli/bmi-target-calculator"
 repository: "https://github.com/brunochirelli/bmi-target-calculator"
 thumbnail: "bmi.jpg"
 ---

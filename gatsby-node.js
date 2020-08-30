@@ -14,6 +14,8 @@ exports.createPages = async ({ actions, graphql }) => {
             frontmatter {
               path
               title
+              repository
+              live_link
             }
             html
           }
@@ -28,7 +30,12 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: node.frontmatter.path,
       component: projectTemplate,
-      context: { title: node.frontmatter.title, content: node.html },
+      context: {
+        title: node.frontmatter.title,
+        content: node.html,
+        liveLink: node.frontmatter.live_link,
+        repository: node.frontmatter.repository,
+      },
     });
   });
 };
