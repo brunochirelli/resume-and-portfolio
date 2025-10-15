@@ -22,4 +22,3 @@ I am a React (passionate for Gatsby.js and JAMStack) front-end developer with a 
 You could see my experience in my Linkedin profile and my website
 
 - [Linkedin profile](https://www.linkedin.com/in/brunochirelli/)
-- [brunochirelli.com.br](https://www.brunochirelli.com.br/)
